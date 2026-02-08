@@ -5,7 +5,7 @@ const OpenAI = require("openai");
 admin.initializeApp();
 
 const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: process.env.OPENAI_API_KEY,
 });
 
 exports.analyzeCode = onCall(async (request) => {
